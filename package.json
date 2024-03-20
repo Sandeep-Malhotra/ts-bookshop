@@ -14,11 +14,12 @@
   "devDependencies": {
     "@cap-js/sqlite": "^1",
     "@sap/cds-dk": "^7",
-    "@cap-js/cds-typer": ">=0.1"
+    "@cap-js/cds-typer": ">=0.18"
   },
   "scripts": {
     "start": "cds-serve",
-    "build:models": "npx @cap-js/cds-typer '*' --outputDirectory @cds-models"
+    "build:models": "npx @cap-js/cds-typer '*' --outputDirectory @cds-models",
+    "run:local":"npm run build:models && tsc && cds-ts serve"
   },
   "cds": {
     "requires": {
